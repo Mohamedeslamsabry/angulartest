@@ -33,7 +33,7 @@ getorderUser(idtoken:string):Observable<any>{
 
  //!payment visa
  CheackOut(id:string|null,data:object):Observable<any>{
-  return this._HttpClient.post(`${environment.BaseUrl}/api/v1/orders/checkout-session/${id}?url=${environment.Urlserver}`,   //!id --->  host id cart 
+  return this._HttpClient.post(`${environment.BaseUrl}/api/v1/orders/checkout-session/${id}?url=${window.location.origin}`,   //!id --->  host id cart 
     {
       "shippingAddress":data    //!data in Body
     },    
